@@ -18,11 +18,11 @@ public partial class LogInForm : Window
         string username = UsernameTextBox.Text;
         string password = PasswordBox.Password;
 
-        bool userExists = _userRepository.Exists(username, password);
+        long userId = _userRepository.GetIdByCredentials(username, password);
 
-        if (userExists)
+        if (userId != -1)
         {
-            HomeWindow homeWindow = new HomeWindow();
+            HomeWindow homeWindow = new HomeWindow(userId);
             homeWindow.Show();
             this.Close();
         }

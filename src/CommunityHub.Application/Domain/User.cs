@@ -2,12 +2,13 @@ namespace CommunityHub.Application.Domain;
 
 public class User
 {
-    public long Id { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public string Name { get; set; }
-    public string Surname { get; set; }
-    public DateTime BirthDay { get; set; }
+    public long Id { get; private set; }
+    public string Username { get; private set; }
+    public string Password { get; private set; }
+    public string Name { get; private set; }
+    public string Surname { get; private set; }
+    public DateTime BirthDay { get; private set; }
+    public List<Post>? Posts { get; private set; }
 
     public User(long id, string username, string password, string name, string surname, DateTime birthDay)
     {
@@ -17,5 +18,17 @@ public class User
         Name = name;
         Surname = surname;
         BirthDay = birthDay;
+        Posts = null;
+    }
+
+    public void AddPost(Post post)
+    {
+        if (Posts == null)
+        {
+            Posts = new List<Post>();
+        }
+
+        Posts.Add(post);
+        post.User = this;
     }
 }
