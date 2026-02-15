@@ -1,9 +1,6 @@
-﻿<Application x:Class="CommunityHub.App"
+﻿<Application x:Class="CommunityHub.Ui.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:CommunityHub"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+             StartupUri="/Views/LogInForm.xaml">
+    <Application.Resources></Application.Resources>
 </Application>

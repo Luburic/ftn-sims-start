@@ -1,7 +1,3 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿namespace CommunityHub.Ui;
 
-namespace CommunityHub;
-
-public partial class App : Application {}
+public partial class App : System.Windows.Application {}
