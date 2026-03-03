@@ -7,8 +7,8 @@ Projekat je organizovan u dva glavna dela:
 ```
 CommunityHub/
 ├── src/
-│   ├── CommunityHub.Application/    # Poslovna logika i pristup bazi
-│   └── CommunityHub.Ui/              # Korisnički interfejs (WPF)
+│   ├── CommunityHub.Application/ # Poslovna logika i pristup bazi
+│   └── CommunityHub.Ui/          # Korisnički interfejs (WPF)
 └── CommunityHub.slnx
 ```
 
@@ -88,10 +88,17 @@ WPF projekat koji sadrži sve prozore i korisničku interakciju.
 
 ### Preduslovi
 
-1. **PostgreSQL** instaliran i pokrenut na localhost:5432
-2. **.NET 10 SDK** instaliran
+1. **.NET 10 SDK** instaliran
+2. **PostgreSQL** instaliran i pokrenut na localhost:5432
 3. **Kreirana baza podataka** sa imenom `communityhub`
 4. **Definisanje šeme i početnih podataka** kroz pgAdmin alat puštanjem `database.sql` i `seed.sql` skripti.
+
+Za korake 2-4 instaliracij PostgreSQL i upoznaj se sa pgAdmin alatom. Za instalaciju je potrebno:
+
+1. Preuzeti instalaciju najnovije verzije sa <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank">sledećeg linka</a>, gde biraš instalaciju za svoj operativni sistem (npr. Windows x86-64).
+2. Pokrenuti i kompletirati proces instalacije. Preporuka je da korisničko ime i lozinka budu `postgres`, a port `5432`.
+
+Uz PostgresSQL bazu podataka dobijaš i **pgAdmin** aplikaciju kroz koju možeš da formiraš i sprovodiš SQL naredbe. <a href="https://youtu.be/Q3yDPIEV1R4" target="_blank"><b>Sledeći video</b></a> demonstrira kako se kreira baza podataka i tabele i izvršavaju SQL naredbe.
 
 ### Pokretanje Aplikacije
 
