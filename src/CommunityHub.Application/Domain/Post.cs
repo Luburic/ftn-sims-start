@@ -16,4 +16,13 @@ public class Post
         CreatedAt = createdAt;
         User = null;
     }
+
+    public Post(string title, string content)
+    {
+        Id = 0;
+        Title = title;
+        Content = content;
+        CreatedAt = DateTime.Now;
+        User = null;
+    }
 }

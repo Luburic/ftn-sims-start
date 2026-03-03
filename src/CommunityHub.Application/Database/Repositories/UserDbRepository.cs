@@ -5,7 +5,7 @@ namespace CommunityHub.Application.Database.Repositories;
 
 public class UserDbRepository
 {
-    public long GetIdByCredentials(string username, string password)
+    public long? GetIdByCredentials(string username, string password)
     {
         // using blok automatski zatvara konekciju na kraju bloka u kom je pozvan
         using IDbConnection connection = PostgresConnection.CreateConnection();
@@ -32,10 +32,10 @@ public class UserDbRepository
             return Convert.ToInt64(result);
         }
 
-        return -1;
+        return null;
     }
 
-    public User GetWithPosts(long userId)
+    public User? GetWithPosts(long userId)
     {
         using IDbConnection connection = PostgresConnection.CreateConnection();
 
@@ -95,6 +95,6 @@ public class UserDbRepository
             user.AddPost(post);
         }
 
-        return user!;
+        return user;
     }
 }
